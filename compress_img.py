@@ -1,14 +1,16 @@
-##  Script taken from https://thepythoncode.com/article/compress-images-in-python 
+#  Script taken from https://thepythoncode.com/article/compress-images-in-python 
+## Edited for our purpose
 
 ### Script to compress images
 
 #### Run by executing following line in terminal:
-##### py compress_img.py "frames/fruits.mp4" -o "compressed_frames" -j -w 200 -hh 200
-###### Change arguments depending on input and output folder, and width and height of output image
+##### py compress_img.py "frames/fruits.mp4" -o "compressed_frames" -j -c 280 -r 0.277
+##### compresses images from frames/fruits.mp4, stores in compressed_frames,
+##### -j converts to jpg file, -c: crops 280 pixels from top and bottom, -r resizes height and width * 0.277
 
 import os
 from PIL import Image
-import argparse
+import cv2
 
 def get_size_format(b, factor=1024, suffix="B"):
     """
@@ -24,7 +26,7 @@ def get_size_format(b, factor=1024, suffix="B"):
     return f"{b:.2f}Y{suffix}"
 
 
-def compress_img(image_path, output_folder, new_size_ratio=0.9, quality=90, width=None, height=None, to_jpg=True):
+def compress_img(image_path, output_folder, new_size_ratio=0.9, quality=90, width=None, height=None, to_jpg=True, crop=None):
     # load the image to memory
     img = Image.open(image_path)
     # print the original image shape
@@ -33,6 +35,12 @@ def compress_img(image_path, output_folder, new_size_ratio=0.9, quality=90, widt
     image_size = os.path.getsize(image_path)
     # print the size before compression/resizing
     print("[*] Size before compression:", get_size_format(image_size))
+
+    if crop:
+        width, height = img.size 
+        img = img.crop((0, crop, width, height - crop))
+        print("[+] Cropped Image shape:", img.size)
+
     if new_size_ratio < 1.0:
         # if resizing ratio is below 1.0, then multiply width & height with this ratio to reduce image size
         img = img.resize((int(img.size[0] * new_size_ratio), int(img.size[1] * new_size_ratio)), Image.LANCZOS)
@@ -63,7 +71,7 @@ def compress_img(image_path, output_folder, new_size_ratio=0.9, quality=90, widt
         img = img.convert("RGB")
         # save the image with the corresponding quality and optimize set to True
         img.save(new_filepath, quality=quality, optimize=True)
-    print("[+] New file saved:", new_filename)
+    print("[+] New file saved:", new_filepath, new_filename)
     # get the new image size in bytes
     new_image_size = os.path.getsize(new_filepath)
     # print the new size in a good format
@@ -74,14 +82,14 @@ def compress_img(image_path, output_folder, new_size_ratio=0.9, quality=90, widt
     print(f"[+] Image size change: {saving_diff/image_size*100:.2f}% of the original image size.")
     
 
-def process_folder(folder, output_folder, resize_ratio, quality, width, height, to_jpg):
+def process_folder(folder, output_folder, resize_ratio, quality, width, height, to_jpg, crop):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
     
     for filename in os.listdir(folder):
         if filename.lower().endswith((".png", ".jpg", ".jpeg", ".bmp", ".gif")):
             file_path = os.path.join(folder, filename)
-            compress_img(file_path, output_folder, resize_ratio, quality, width, height, to_jpg)
+            compress_img(file_path, output_folder, resize_ratio, quality, width, height, to_jpg, crop)
 
 
 if __name__ == "__main__":
@@ -94,6 +102,8 @@ if __name__ == "__main__":
     parser.add_argument("-r", "--resize-ratio", type=float, help="Resizing ratio from 0 to 1, setting to 0.5 will multiply width & height of the image by 0.5. Default is 1.0", default=1.0)
     parser.add_argument("-w", "--width", type=int, help="The new width image, make sure to set it with the `height` parameter")
     parser.add_argument("-hh", "--height", type=int, help="The new height for the image, make sure to set it with the `width` parameter")
+    parser.add_argument("-c", "--crop", type=int, help="Crop this many pixels from the top and bottom before resizing")
+
     args = parser.parse_args()
     # print the passed arguments
     print("="*50)
@@ -101,11 +111,12 @@ if __name__ == "__main__":
     print("[*] To JPEG:", args.to_jpg)
     print("[*] Quality:", args.quality)
     print("[*] Resizing ratio:", args.resize_ratio)
+    print("[*] Crop:", args.crop)
     if args.width and args.height:
         print("[*] Width:", args.width)
         print("[*] Height:", args.height)
     print("="*50)
     # compress the image
-    process_folder(args.folder, args.output, args.resize_ratio, args.quality, args.width, args.height, args.to_jpg)
+    process_folder(args.folder, args.output, args.resize_ratio, args.quality, args.width, args.height, args.to_jpg, args.crop)
 
 
