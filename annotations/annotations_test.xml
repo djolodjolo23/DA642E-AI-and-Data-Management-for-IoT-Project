@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>2004777</id>
+      <size>98</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2025-02-03 10:44:43.232368+00:00</created>
+      <updated>2025-02-03 17:25:42.455610+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>97</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>2007257</id>
+          <start>0</start>
+          <stop>97</stop>
+          <url>https://app.cvat.ai/api/jobs/2004777</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>djolodjolo23</username>
+        <email>dimitrovdjordje@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>orange</name>
+          <color>#c0e0a0</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>apple</name>
+          <color>#400080</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>banana</name>
+          <color>#80c080</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2025-02-05 21:04:41.098554+00:00</dumped>
+  </meta>
+  <image id="0" name="apple banana orange.jpg.5iqoid95.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="21.77" ytl="14.30" xbr="54.90" ybr="45.11" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="26.22" ytl="48.11" xbr="55.34" ybr="77.83" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="60.80" ytl="19.36" xbr="92.99" ybr="89.50" z_order="0">
+    </box>
+  </image>
+  <image id="1" name="apple banana orange.jpg.5iqoihqv.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="25.70" ytl="16.95" xbr="59.23" ybr="48.40" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="30.43" ytl="53.05" xbr="58.50" ybr="80.60" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="63.21" ytl="23.09" xbr="96.50" ybr="93.23" z_order="0">
+    </box>
+  </image>
+  <image id="2" name="apple banana orange.jpg.5iqoimgg.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="43.26" ytl="9.13" xbr="76.80" ybr="40.58" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="24.90" ytl="41.38" xbr="53.45" ybr="68.93" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="39.39" ytl="34.90" xbr="96.40" ybr="91.42" z_order="0">
+    </box>
+  </image>
+  <image id="4" name="apple banana orange.jpg.5iqoiu6t.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="78.51" ytl="12.10" xbr="107.40" ybr="44.19" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="45.00" ytl="15.40" xbr="72.09" ybr="42.22" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="32.50" ytl="45.40" xbr="104.82" ybr="83.97" z_order="0">
+    </box>
+  </image>
+  <image id="8" name="apple banana orange.jpg.5iqokgvf.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="2.80" ytl="25.21" xbr="40.50" ybr="65.80" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="49.81" ytl="32.00" xbr="79.80" ybr="65.20" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="18.91" ytl="3.78" xbr="94.60" ybr="37.40" z_order="0">
+    </box>
+  </image>
+  <image id="9" name="apple banana orange.jpg.5iqoklhs.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="3.20" ytl="26.17" xbr="40.38" ybr="66.90" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="49.81" ytl="32.80" xbr="80.20" ybr="66.30" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="19.70" ytl="3.66" xbr="94.34" ybr="38.68" z_order="0">
+    </box>
+  </image>
+  <image id="10" name="apple banana orange.jpg.5iqokq6q.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="4.30" ytl="31.83" xbr="40.38" ybr="72.55" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="49.50" ytl="38.09" xbr="78.52" ybr="71.10" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="18.98" ytl="9.07" xbr="93.62" ybr="44.09" z_order="0">
+    </box>
+  </image>
+  <image id="11" name="apple banana orange.jpg.5iqokt81.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="6.10" ytl="35.20" xbr="42.18" ybr="74.80" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="51.06" ytl="41.46" xbr="80.30" ybr="74.47" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="21.40" ytl="13.00" xbr="93.50" ybr="46.26" z_order="0">
+    </box>
+  </image>
+  <image id="12" name="apple banana orange.jpg.5iqol0bu.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="6.22" ytl="37.00" xbr="42.30" ybr="76.60" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="51.42" ytl="42.78" xbr="80.66" ybr="74.90" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="22.00" ytl="14.56" xbr="93.38" ybr="47.82" z_order="0">
+    </box>
+  </image>
+  <image id="13" name="apple banana orange.jpg.5iqol4u0.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="6.10" ytl="39.17" xbr="42.18" ybr="78.77" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="50.94" ytl="44.59" xbr="80.18" ybr="76.70" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="21.04" ytl="16.01" xbr="92.41" ybr="49.27" z_order="0">
+    </box>
+  </image>
+  <image id="18" name="apple banana orange.jpg.5iqollu2.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="4.90" ytl="41.69" xbr="41.22" ybr="81.30" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="50.10" ytl="47.00" xbr="79.34" ybr="79.80" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="19.60" ytl="19.10" xbr="91.60" ybr="51.70" z_order="0">
+    </box>
+  </image>
+  <image id="19" name="apple banana orange.jpg.5iqolov1.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="3.90" ytl="41.33" xbr="40.02" ybr="81.10" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="49.02" ytl="47.24" xbr="78.25" ybr="80.04" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="18.40" ytl="19.34" xbr="90.40" ybr="51.94" z_order="0">
+    </box>
+  </image>
+  <image id="21" name="apple banana orange.jpg.5iqolv48.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="2.10" ytl="40.13" xbr="38.09" ybr="79.30" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="46.85" ytl="45.07" xbr="77.00" ybr="77.30" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="15.39" ytl="16.21" xbr="89.30" ybr="49.20" z_order="0">
+    </box>
+  </image>
+  <image id="24" name="apple banana orange.jpg.5iqomj4a.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="62.01" ytl="47.10" xbr="96.30" ybr="84.60" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="26.00" ytl="59.40" xbr="56.68" ybr="90.64" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="47.60" ytl="11.31" xbr="82.20" ybr="71.70" z_order="0">
+    </box>
+  </image>
+  <image id="27" name="apple banana orange.jpg.5iqomtu4.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="58.30" ytl="68.70" xbr="86.90" ybr="96.00" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="95.17" ytl="52.78" xbr="121.00" ybr="78.80" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="40.86" ytl="0.72" xbr="85.60" ybr="54.90" z_order="0">
+    </box>
+  </image>
+  <image id="28" name="apple banana orange.jpg.5iqon2gv.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="58.60" ytl="9.00" xbr="90.90" ybr="42.90" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="19.86" ytl="8.15" xbr="45.69" ybr="38.70" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="25.56" ytl="47.80" xbr="56.90" ybr="96.00" z_order="0">
+    </box>
+  </image>
+  <image id="31" name="apple banana orange.jpg.5iqones9.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="24.80" ytl="53.46" xbr="72.42" ybr="95.70" z_order="0">
+    </box>
+    <box label="apple" source="manual" occluded="0" xtl="88.40" ytl="48.10" xbr="125.20" ybr="82.73" z_order="0">
+    </box>
+    <box label="banana" source="manual" occluded="0" xtl="45.90" ytl="6.20" xbr="84.33" ybr="52.98" z_order="0">
+    </box>
+  </image>
+  <image id="34" name="apple.jpg.5iqofc9s.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="50.00" ytl="38.86" xbr="79.44" ybr="66.30" z_order="0">
+    </box>
+  </image>
+  <image id="36" name="apple.jpg.5iqoflhj.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="42.30" ytl="47.70" xbr="88.24" ybr="95.10" z_order="0">
+    </box>
+  </image>
+  <image id="37" name="apple.jpg.5iqofoku.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="44.30" ytl="47.70" xbr="89.11" ybr="95.10" z_order="0">
+    </box>
+  </image>
+  <image id="38" name="apple.jpg.5iqofrlo.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="45.02" ytl="46.40" xbr="89.83" ybr="89.30" z_order="0">
+    </box>
+  </image>
+  <image id="39" name="apple.jpg.5iqofuq0.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="46.18" ytl="40.90" xbr="90.99" ybr="86.85" z_order="0">
+    </box>
+  </image>
+  <image id="40" name="apple.jpg.5iqog1qm.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="53.11" ytl="44.51" xbr="97.92" ybr="90.60" z_order="0">
+    </box>
+  </image>
+  <image id="41" name="apple.jpg.5iqog9il.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="51.37" ytl="39.17" xbr="96.18" ybr="85.26" z_order="0">
+    </box>
+  </image>
+  <image id="42" name="apple.jpg.5iqoge52.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="48.78" ytl="39.02" xbr="93.59" ybr="85.11" z_order="0">
+    </box>
+  </image>
+  <image id="43" name="apple.jpg.5iqogh9a.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="47.80" ytl="44.37" xbr="90.99" ybr="88.10" z_order="0">
+    </box>
+  </image>
+  <image id="48" name="apple.jpg.5iqoh0j9.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="56.30" ytl="29.06" xbr="94.02" ybr="68.50" z_order="0">
+    </box>
+  </image>
+  <image id="50" name="apple.jpg.5iqoh9r8.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="57.60" ytl="31.95" xbr="93.90" ybr="71.50" z_order="0">
+    </box>
+  </image>
+  <image id="51" name="apple.jpg.5iqohcv1.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="apple" source="manual" occluded="0" xtl="58.00" ytl="36.64" xbr="93.06" ybr="73.40" z_order="0">
+    </box>
+  </image>
+  <image id="56" name="banana and orange.jpg.5iqo5uqt.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="18.65" ytl="23.69" xbr="43.30" ybr="82.64" z_order="0">
+    </box>
+    <box label="orange" source="manual" occluded="0" xtl="49.45" ytl="43.06" xbr="79.80" ybr="70.49" z_order="0">
+    </box>
+  </image>
+  <image id="62" name="banana and orange.jpg.5iqo7p9b.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="40.79" ytl="18.28" xbr="101.70" ybr="54.10" z_order="0">
+    </box>
+    <box label="orange" source="manual" occluded="0" xtl="29.80" ytl="54.61" xbr="58.63" ybr="85.90" z_order="0">
+    </box>
+  </image>
+  <image id="64" name="banana and orange.jpg.5iqo97e2.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="41.80" ytl="21.65" xbr="79.40" ybr="68.30" z_order="0">
+    </box>
+    <box label="orange" source="manual" occluded="0" xtl="70.60" ytl="62.80" xbr="96.40" ybr="89.39" z_order="0">
+    </box>
+  </image>
+  <image id="65" name="banana and orange.jpg.5iqo9gle.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="42.30" ytl="39.50" xbr="75.10" ybr="81.53" z_order="0">
+    </box>
+    <box label="orange" source="manual" occluded="0" xtl="80.10" ytl="43.00" xbr="108.10" ybr="65.57" z_order="0">
+    </box>
+  </image>
+  <image id="66" name="banana and orange.jpg.5iqo9pt4.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="36.04" ytl="31.92" xbr="65.30" ybr="76.50" z_order="0">
+    </box>
+    <box label="orange" source="manual" occluded="0" xtl="71.80" ytl="33.86" xbr="97.20" ybr="56.43" z_order="0">
+    </box>
+  </image>
+  <image id="69" name="banana.jpg.5iqnq7fo.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="13.91" ytl="47.40" xbr="57.30" ybr="74.33" z_order="0">
+    </box>
+  </image>
+  <image id="70" name="banana.jpg.5iqnqjll.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="12.20" ytl="50.40" xbr="71.30" ybr="69.52" z_order="0">
+    </box>
+  </image>
+  <image id="71" name="banana.jpg.5iqnsb1v.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="30.49" ytl="34.28" xbr="86.30" ybr="62.70" z_order="0">
+    </box>
+  </image>
+  <image id="72" name="banana.jpg.5iqnsnbb.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="35.70" ytl="32.36" xbr="83.30" ybr="60.50" z_order="0">
+    </box>
+  </image>
+  <image id="73" name="banana.jpg.5iqnt3l6.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="34.38" ytl="46.91" xbr="63.90" ybr="75.06" z_order="0">
+    </box>
+  </image>
+  <image id="74" name="banana.jpg.5iqntfvb.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="47.49" ytl="33.44" xbr="81.30" ybr="79.90" z_order="0">
+    </box>
+  </image>
+  <image id="76" name="banana.jpg.5iqnul2k.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="34.02" ytl="32.20" xbr="96.20" ybr="80.86" z_order="0">
+    </box>
+  </image>
+  <image id="77" name="banana.jpg.5iqnuu3v.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="39.31" ytl="19.20" xbr="89.60" ybr="74.49" z_order="0">
+    </box>
+  </image>
+  <image id="78" name="banana.jpg.5iqnv7at.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="47.00" ytl="23.17" xbr="95.61" ybr="78.10" z_order="0">
+    </box>
+  </image>
+  <image id="79" name="banana.jpg.5iqnvmno.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="26.90" ytl="17.52" xbr="82.62" ybr="58.20" z_order="0">
+    </box>
+  </image>
+  <image id="80" name="banana.jpg.5iqnvvvb.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="39.20" ytl="7.29" xbr="76.49" ybr="75.40" z_order="0">
+    </box>
+  </image>
+  <image id="83" name="banana.jpg.5iqo14u4.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="29.70" ytl="32.30" xbr="106.20" ybr="76.00" z_order="0">
+    </box>
+  </image>
+  <image id="84" name="banana.jpg.5iqo23mf.ingestion-6b47c5588c-m9z4f.jpg" width="128" height="96">
+    <box label="banana" source="manual" occluded="0" xtl="28.50" ytl="1.60" xbr="79.10" ybr="66.60" z_order="0">
+    </box>
+  </image>
+  <image id="94" name="orange.jpg.5iqodu7g.ingestion-6b47c5588c-zkmvt.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="41.02" ytl="22.85" xbr="69.77" ybr="55.45" z_order="0">
+    </box>
+  </image>
+  <image id="96" name="orange.jpg.5iqoe8tv.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="41.80" ytl="62.60" xbr="95.75" ybr="96.00" z_order="0">
+    </box>
+  </image>
+  <image id="97" name="orange.jpg.5iqoeoac.ingestion-6b47c5588c-mddcv.jpg" width="128" height="96">
+    <box label="orange" source="manual" occluded="0" xtl="31.50" ytl="35.00" xbr="82.04" ybr="72.80" z_order="0">
+    </box>
+  </image>
+</annotations>

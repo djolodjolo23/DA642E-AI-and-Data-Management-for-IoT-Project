@@ -1,12 +1,13 @@
 import cv2
 import os
 import xml.etree.ElementTree as ET
-from pascal_voc import write_pascal_voc
+from pascal_voc import write_pascal_voc, append_object_to_pascal_voc
 from PIL import Image, ImageDraw
+from helpers import drawbbox
 
 
-target_image_width = 120
-target_image_height = 120
+target_image_width = 96
+target_image_height = 96
 video_name = 'fruits.mp4'
 annotation_path = 'output.xml'
 
@@ -21,8 +22,11 @@ tree = ET.parse(annotation_path)
 root = tree.getroot()
 
 for track in root.findall('.//track'):
+    prev_frame = None
+
     for box in track.findall('box'):
         frame_num = box.attrib['frame']
+        label = box.attrib['label']
         print(f"Processing frame: {frame_num}")
 
         image_path = os.path.join(f'frames/{video_name}/frame_{frame_num}.png')
@@ -32,6 +36,8 @@ for track in root.findall('.//track'):
         original_image = cv2.imread(image_path)
         xtl, ytl, xbr, ybr = [float(box.attrib[attr]) for attr in ['xtl', 'ytl', 'xbr', 'ybr']]
 
+        if frame_num == '204':
+            print("debug")
         (h, w) = original_image.shape[:2]
         aspect_ratio = h / w
 
@@ -60,5 +66,29 @@ for track in root.findall('.//track'):
         new_xbr = xbr * resize_ratio
         new_ybr = (ybr * resize_ratio) - start_y if new_height > target_image_height else ybr * resize_ratio
 
-        write_pascal_voc(f'{compressed_annotations_folderpath}/frame_{frame_num}.xml', f'frame_{frame_num}.png',
-                         target_image_width, target_image_height, new_xtl, new_ytl, new_xbr, new_ybr)
+        if new_xtl < 0:
+            new_xtl = 0
+        if new_ytl < 0:
+            new_ytl = 0
+        if new_xbr > target_image_width:
+            new_xbr = target_image_width
+        if new_ybr > target_image_height:
+            new_ybr = target_image_height
+
+        xml_path = f'{compressed_annotations_folderpath}/frame_{frame_num}.xml'
+        if prev_frame == frame_num:
+            append_object_to_pascal_voc(xml_path, label, new_xtl, new_ytl, new_xbr, new_ybr)
+        else:
+            write_pascal_voc(f'{compressed_annotations_folderpath}/frame_{frame_num}.xml',
+             f'frame_{frame_num}.png', label,
+             target_image_width, target_image_height, new_xtl, new_ytl, new_xbr, new_ybr)
+
+        prev_frame = frame_num
+
+        #drawbbox(compressed_folder_path, frame_num, new_xtl, new_ytl, new_xbr, new_ybr)
+
+
+       # write_pascal_voc(f'{compressed_annotations_folderpath}/frame_{frame_num}.xml',
+                        # f'frame_{frame_num}.png', label,
+                        # target_image_width, target_image_height, new_xtl, new_ytl, new_xbr, new_ybr)
+

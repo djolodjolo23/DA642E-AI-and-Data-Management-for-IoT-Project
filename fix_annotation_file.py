@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 
-tree = ET.parse('annotations/annotations.xml')
+tree = ET.parse('annotations/annotations_train.xml')
 root = tree.getroot()
 
 frames_dict = defaultdict(list)

@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 import os
 
 video_name = 'fruits.mp4'
-xml_path = 'annotations/annotations.xml'
+xml_path = 'annotations/annotations_train.xml'
 video_path = 'videos/fruits.mp4'
 
 def parse_xml(xml_file):
