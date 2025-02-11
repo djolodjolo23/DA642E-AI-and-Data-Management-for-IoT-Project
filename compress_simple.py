@@ -2,7 +2,6 @@ import cv2
 import os
 import xml.etree.ElementTree as ET
 from pascal_voc import write_pascal_voc, append_object_to_pascal_voc
-from PIL import Image, ImageDraw
 from helpers import drawbbox
 
 
@@ -39,12 +38,9 @@ for track in root.findall('.//track'):
         if frame_num == '204':
             print("debug")
         (h, w) = original_image.shape[:2]
-        aspect_ratio = h / w
+        aspect_ratio = h / w # height / width, to maintain the aspect ratio of the original image
 
-        new_height = int(aspect_ratio * target_image_height)
-
-        bbox_width = xbr - xtl
-        bbox_height = ybr - ytl
+        new_height = int(aspect_ratio * target_image_height) # aspect_ratio * target_imag
 
         resized_image = cv2.resize(original_image, (target_image_width, new_height))
 
@@ -66,13 +62,13 @@ for track in root.findall('.//track'):
         new_xbr = xbr * resize_ratio
         new_ybr = (ybr * resize_ratio) - start_y if new_height > target_image_height else ybr * resize_ratio
 
-        if new_xtl < 0:
+        if new_xtl < 0: # if xtl is negative, set it to 0
             new_xtl = 0
-        if new_ytl < 0:
+        if new_ytl < 0: # if ytl is negative, set it to 0
             new_ytl = 0
-        if new_xbr > target_image_width:
+        if new_xbr > target_image_width: # if xbr is greater than the target image width, set it to the target image width, because bbox reaches maximum width point, which is the target image width
             new_xbr = target_image_width
-        if new_ybr > target_image_height:
+        if new_ybr > target_image_height: # if ybr is greater than the target image height, set it to the target image height, because bbox reaches maximum height point, which is the target image height
             new_ybr = target_image_height
 
         xml_path = f'{compressed_annotations_folderpath}/frame_{frame_num}.xml'
@@ -85,10 +81,6 @@ for track in root.findall('.//track'):
 
         prev_frame = frame_num
 
+        # for debugging, draw the bounding box on the image
         #drawbbox(compressed_folder_path, frame_num, new_xtl, new_ytl, new_xbr, new_ybr)
-
-
-       # write_pascal_voc(f'{compressed_annotations_folderpath}/frame_{frame_num}.xml',
-                        # f'frame_{frame_num}.png', label,
-                        # target_image_width, target_image_height, new_xtl, new_ytl, new_xbr, new_ybr)
 
