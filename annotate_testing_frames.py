@@ -9,8 +9,8 @@ target_image_height = 96
 
 annotation_path = 'annotations/annotations_test.xml'
 
-compressed_testing_folder_path = 'compressed_testing/frames_96 x 96'
-exported_annotations_folderpath = 'testing/annotations'
+compressed_testing_folder_path = f'compressed_testing/frames_{target_image_height} x {target_image_width}'
+exported_annotations_folderpath = 'compressed_testing/annotations'
 os.makedirs(exported_annotations_folderpath, exist_ok=True)
 os.makedirs(compressed_testing_folder_path, exist_ok=True)
 
@@ -52,9 +52,9 @@ for image in root.findall('image'):
 
         resize_ratio = target_image_width / original_image.shape[0]
 
-        new_xtl = xtl * resize_ratio
+        new_xtl = xtl * resize_ratio - start_x if new_width > target_image_width else xtl * resize_ratio
         new_ytl = ytl * resize_ratio
-        new_xbr = xbr * resize_ratio
+        new_xbr = xbr * resize_ratio - start_x if new_width > target_image_width else xbr * resize_ratio
         new_ybr = ybr * resize_ratio
 
 
@@ -67,11 +67,13 @@ for image in root.findall('image'):
         if new_ybr > target_image_height: # if ybr is greater than the target image height, set it to the target image height, because bbox reaches maximum height point, which is the target image height
             new_ybr = target_image_height
 
-        
-        xml_path = f'{exported_annotations_folderpath}/{file_name.split(".")[0]}.xml'
+        new_file_name = file_name.rsplit('.jpg', 1)[0] + '.png'
+        xml_path = f'{exported_annotations_folderpath}/{new_file_name}.xml'
 
         if not on_first_frame:
             append_object_to_pascal_voc(xml_path, label, new_xtl, new_ytl, new_xbr, new_ybr)
         else:
             write_pascal_voc(xml_path, file_name, target_image_width, target_image_height, label, new_xtl, new_ytl, new_xbr, new_ybr)
             on_first_frame = False
+
+        #drawbbox(compressed_testing_folder_path, file_name, new_xtl, new_ytl, new_xbr, new_ybr)

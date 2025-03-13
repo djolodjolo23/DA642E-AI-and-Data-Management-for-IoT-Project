@@ -37,7 +37,7 @@ for track in root.findall('.//track'):
 
         if frame_num == '204':
             print("debug")
-            
+
         (h, w) = original_image.shape[:2]
         aspect_ratio = h / w # height / width, to maintain the aspect ratio of the original image
 
