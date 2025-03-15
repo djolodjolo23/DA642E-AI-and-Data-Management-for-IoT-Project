@@ -4,8 +4,8 @@ import xml.etree.ElementTree as ET
 from pascal_voc import write_pascal_voc, append_object_to_pascal_voc
 from helpers import drawbbox
 
-target_image_width = 96
-target_image_height = 96
+target_image_width = 128
+target_image_height = 128
 
 annotation_path = 'annotations/annotations_test.xml'
 

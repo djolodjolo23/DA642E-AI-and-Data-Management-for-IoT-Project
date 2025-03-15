@@ -50,9 +50,9 @@ def augment_image(image_path, xml_path, save_dir, prefix, iteration):
         A.VerticalFlip(p=0.5),
         A.RandomBrightnessContrast(brightness_limit=0.1, contrast_limit=0.1, p=0.5),
         A.Rotate(limit=30, p=0.5),
-        A.RandomResizedCrop(size=(96, 96), scale=(0.9, 1.0), ratio=(0.75, 1.3333333333333333),
+        A.RandomResizedCrop(size=(128, 128), scale=(0.9, 1.0), ratio=(0.75, 1.3333333333333333),
                             interpolation=cv2.INTER_LINEAR, mask_interpolation=cv2.INTER_NEAREST, p=0.5),
-        A.PadIfNeeded(min_height=96, min_width=96, border_mode=cv2.BORDER_REFLECT)
+        A.PadIfNeeded(min_height=128, min_width=128, border_mode=cv2.BORDER_REFLECT)
 
 
     ], bbox_params=A.BboxParams(format='pascal_voc', label_fields=[]))
@@ -70,8 +70,8 @@ def augment_image(image_path, xml_path, save_dir, prefix, iteration):
 
 def main():
     # TODO: Set the paths, image_dir and xml_dir are original images and annotations, save_dir is the directory to save augmented images and annotations
-    image_dir ='compressed/fruits.mp4/frames_96 x 96'
-    xml_dir = 'compressed/fruits.mp4/annotations_96 x 96'
+    image_dir ='compressed/fruits.mp4/frames_128 x 128'
+    xml_dir = 'compressed/fruits.mp4/annotations_128 x 128'
     save_dir = 'augmented'
 
     os.makedirs(os.path.join(save_dir, 'images'), exist_ok=True)
