@@ -7,8 +7,8 @@ from helpers import drawbbox
 
 target_image_width = 128
 target_image_height = 128
-video_name = 'fruits.mp4'
-annotation_path = 'output.xml'
+video_name = 'banana_white_desk.mp4'
+annotation_path = 'banana_white_desk.xml'
 
 compressed_folder_path = f'compressed/{video_name}/frames_{target_image_width} x {target_image_height}'
 compressed_annotations_folderpath = f'compressed/{video_name}/annotations_{target_image_width} x {target_image_height}'

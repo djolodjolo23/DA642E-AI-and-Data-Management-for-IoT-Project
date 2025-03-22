@@ -70,9 +70,9 @@ def augment_image(image_path, xml_path, save_dir, prefix, iteration):
 
 def main():
     # TODO: Set the paths, image_dir and xml_dir are original images and annotations, save_dir is the directory to save augmented images and annotations
-    image_dir ='compressed/fruits.mp4/frames_128 x 128'
-    xml_dir = 'compressed/fruits.mp4/annotations_128 x 128'
-    save_dir = 'augmented'
+    image_dir ='compressed/banana_white_desk.mp4/frames_128 x 128'
+    xml_dir = 'compressed/banana_white_desk.mp4/annotations_128 x 128'
+    save_dir = 'augmented/banana_white_desk'
 
     os.makedirs(os.path.join(save_dir, 'images'), exist_ok=True)
     os.makedirs(os.path.join(save_dir, 'annotations'), exist_ok=True)

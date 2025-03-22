@@ -7,10 +7,10 @@ from helpers import drawbbox
 target_image_width = 128
 target_image_height = 128
 
-annotation_path = 'annotations/annotations_test.xml'
+annotation_path = 'annotations/testset-orange-2/annotations.xml'
 
-compressed_testing_folder_path = f'compressed_testing/frames_{target_image_height} x {target_image_width}'
-exported_annotations_folderpath = 'compressed_testing/annotations'
+compressed_testing_folder_path = f'compressed_testing/testset-orange-2/frames_{target_image_height} x {target_image_width}'
+exported_annotations_folderpath = 'compressed_testing/testset-orange-2/annotations'
 os.makedirs(exported_annotations_folderpath, exist_ok=True)
 os.makedirs(compressed_testing_folder_path, exist_ok=True)
 
@@ -26,7 +26,7 @@ for image in root.findall('image'):
         label = box.attrib['label']
         print(f"Processing frame: {frame_num}")
 
-        image_path = os.path.join(f'testing/{file_name}')
+        image_path = os.path.join(f'testing/images_of_orange (2)/{file_name}')
         if not os.path.exists(image_path):
             continue
 
@@ -73,7 +73,7 @@ for image in root.findall('image'):
         if not on_first_frame:
             append_object_to_pascal_voc(xml_path, label, new_xtl, new_ytl, new_xbr, new_ybr)
         else:
-            write_pascal_voc(xml_path, file_name, target_image_width, target_image_height, label, new_xtl, new_ytl, new_xbr, new_ybr)
+            write_pascal_voc(xml_path, file_name, label, target_image_width, target_image_height, new_xtl, new_ytl, new_xbr, new_ybr)
             on_first_frame = False
 
         #drawbbox(compressed_testing_folder_path, file_name, new_xtl, new_ytl, new_xbr, new_ybr)

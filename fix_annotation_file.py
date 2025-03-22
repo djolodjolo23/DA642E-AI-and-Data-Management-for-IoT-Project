@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 
-tree = ET.parse('annotations/annotations_train.xml')
+tree = ET.parse('annotations/banana_white_desk.xml')
 root = tree.getroot()
 
 frames_dict = defaultdict(list)
@@ -29,4 +29,4 @@ for frame in sorted(frames_dict.keys(), key=lambda x: int(x)):
 
 root.append(new_track)
 
-tree.write('output.xml', encoding='utf-8', xml_declaration=True)
+tree.write('banana_white_desk.xml', encoding='utf-8', xml_declaration=True)
